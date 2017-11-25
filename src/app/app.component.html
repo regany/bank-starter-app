@@ -1,0 +1,47 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-sidenav-container>
+
+  <mat-sidenav #sidenav mode="side">
+    <!-- <ng-container *ngIf="location.path() !== '/login'"> -->
+    <div class="mdc-temporary-drawer__toolbar-spacer">
+      <i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i>&nbsp; JANE DOE &nbsp;
+      <a mat-icon-button [matMenuTriggerFor]="menu">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </a>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item routerLink="/login">
+          <i class="fa fa-sign-out fa-lg" aria-hidden="true"></i>
+          <span>Logout</span>
+        </button>
+      </mat-menu>
+    </div>
+    <div class="mdc-list-group">
+      <nav class="mdc-list">
+        <a class="mdc-list-item mdc-persistent-drawer--selected" routerLink="/accounts">
+          Accounts
+        </a>
+        <a class="mdc-list-item" routerLink="/transfers">
+          Transfers
+        </a>
+        <a class="mdc-list-item" href="#">
+          Bill Pay
+        </a>
+        <a class="mdc-list-item" href="#">
+          Payroll &amp; ACH
+        </a>
+        <a class="mdc-list-item" href="#">
+          Users &amp; Access
+        </a>
+        <a class="mdc-list-item" href="#">
+          Account Options
+        </a>
+      </nav>
+    </div>
+    <!-- </ng-container> -->
+  </mat-sidenav>
+
+  <div class="main">
+    <app-header (toggle)="toggleSideNav()"></app-header>
+    <router-outlet></router-outlet>
+  </div>
+</mat-sidenav-container>

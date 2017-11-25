@@ -1,0 +1,18 @@
+<header class="mdc-toolbar mdc-elevation--z4">
+  <div class="mdc-toolbar__row">
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+      <button *ngIf="location.path() !== '/login'" (click)="toggleSideNav()" class="mdc-toolbar__menu-icon">
+        <i class="fa fa-bars fa-2x" aria-hidden="true"></i>
+      </button>
+      <span class="mdc-toolbar__title catalog-title">Bank Logo</span>
+    </section>
+    <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+      <a href="#" class="mdc-toolbar__icon">
+        <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+      </a>
+      <a href="#" class="mdc-toolbar__icon">
+        <i class="fa fa-question-circle-o fa-lg" aria-hidden="true"></i>
+      </a>
+    </section>
+  </div>
+</header>
