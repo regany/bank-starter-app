@@ -1,4 +1,4 @@
-# BankPoc
+# Bank Starter App
 
 Banking proof of concept startup app. Built in Angular5 with Google Material IO components (https://material.angular.io/) for navigation, header, and forms. 
 
